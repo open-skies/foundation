@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://open-skies.org/open-skies.schema.json",
+  "title": "Airspace",
+  "description": "An open-skies airspace",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the airspace. Must be unique per country.",
+      "type": "string"
+    },
+    "country": {
+      "description": "The country this airspace belongs to, as ISO Alpha-2 country code.",
+      "type": "string",
+      "maxLength": 2
+    },
+    "type": {
+      "description": "The type of the airspace.",
+      "type": "string",
+      "enum": [
+        "Class A",
+        "Class B",
+        "Class C",
+        "Class D",
+        "Class E",
+        "CTR",
+        "TMA"
+      ]
+    },
+    "description": {
+      "description": "The airspaces description. Markdown is allowed.",
+      "type": "string"
+    },
+    "info": {
+      "description": "Additional information for the airspace.",
+      "type": "object",
+      "properties": {
+        "radio": {
+          "description": "The radio frequency associated with this airspace.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "The phone number associated with this airspace.",
+          "type": "string"
+        }
+      }
+    },
+    "boundary": {
+      "description": "The boundary polygon of the airspace.",
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "description": "A vertex point of the polygon as WGS84 coordinates.",
+        "type": "array",
+        "items": [
+          {
+            "description": "The WGS84 latitude in degrees",
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          {
+            "description": "The WGS84 longitude in degrees",
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          }
+        ],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "top": {
+      "description": "The top boundary of the airspace.",
+      "type": "object"
+    },
+    "bottom": {
+      "description": "The bottom boundary of the airspace.",
+      "type": "object"
+    }
+  },
+  "required": [
+    "name",
+    "country",
+    "type",
+    "boundary",
+    "top",
+    "bottom"
+  ]
+}

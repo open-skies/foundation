@@ -1,0 +1,24 @@
+{
+  "$schema": "./open-skies.schema.json",
+  "name": "Example",
+  "country": "CH",
+  "type": "Class D",
+  "description": "# Example\nWith markdown support!",
+  "info": {
+    "radio": "118.375 MHZ",
+    "phone": "+41 12 345 67 89"
+  },
+  "boundary": [
+    [47.123, 8.456],
+    [47.122, 8.457],
+    [47.122, 8.455]
+  ],
+  "top": {
+    "type": "QNH",
+    "altitude": 2250,
+    "unit": "m"
+  },
+  "bottom": {
+    "type": "Ground"
+  }
+}
