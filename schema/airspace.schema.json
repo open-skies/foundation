@@ -34,9 +34,17 @@
       "description": "Contact info for this airspace.",
       "$ref": "contact-info.schema.json"
     },
-    "boundary": {
-      "description": "The boundary polygon of the airspace.",
-      "$ref": "polygon.schema.json"
+    "active": {
+      "description": "The times this airspace is active.",
+      "oneOf": [
+        {
+          "type": "string",
+          "const": "always"
+        },
+        {
+          "$ref": "times.schema.json"
+        }
+      ]
     },
     "top": {
       "description": "The top boundary of the airspace.",
@@ -45,6 +53,10 @@
     "bottom": {
       "description": "The bottom boundary of the airspace.",
       "type": "object"
+    },
+    "boundary": {
+      "description": "The boundary polygon of the airspace.",
+      "$ref": "polygon.schema.json"
     }
   },
   "required": [
@@ -53,9 +65,10 @@
     "name",
     "country",
     "class",
-    "boundary",
+    "active",
     "top",
-    "bottom"
+    "bottom",
+    "boundary"
   ],
   "additionalProperties": false
 }

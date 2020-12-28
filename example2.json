@@ -9,30 +9,7 @@
     "radio": "118.375 MHZ",
     "phone": "+41 12 345 67 89"
   },
-  "active": {
-    "and": [
-      [
-        "monday",
-        "tuesday"
-      ],
-      [
-        "june",
-        "july"
-      ],
-      {
-        "or": [
-          {
-            "begin": "06:45",
-            "end": "12:47"
-          },
-          {
-            "begin": "16:00",
-            "end": "18:13"
-          }
-        ]
-      }
-    ]
-  },
+  "active": "always",
   "top": {
     "type": "QNH",
     "altitude": 2250,
