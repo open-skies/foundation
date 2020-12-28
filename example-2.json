@@ -1,0 +1,15 @@
+{
+  "$schema": "./schema/airspace.schema.json",
+  "id": "example-2",
+  "country": "CH",
+  "name": "Example 2",
+  "class": "class-d",
+  "active": "always",
+  "top": "space",
+  "bottom": "ground",
+  "boundary": [
+    [47.123, 8.456],
+    [47.122, 8.457],
+    [47.122, 8.455]
+  ]
+}

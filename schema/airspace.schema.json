@@ -16,7 +16,7 @@
     "country": {
       "description": "The country this airspace belongs to, as ISO Alpha-2 country code.",
       "type": "string",
-      "maxLength": 2
+      "pattern": "^[A-Z]{2}$"
     },
     "name": {
       "description": "The name of the airspace.",
@@ -48,11 +48,27 @@
     },
     "top": {
       "description": "The top boundary of the airspace.",
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "string",
+          "const": "space"
+        },
+        {
+          "$ref": "altitude.schema.json"
+        }
+      ]
     },
     "bottom": {
       "description": "The bottom boundary of the airspace.",
-      "type": "object"
+      "oneOf": [
+        {
+          "type": "string",
+          "const": "ground"
+        },
+        {
+          "$ref": "altitude.schema.json"
+        }
+      ]
     },
     "boundary": {
       "description": "The boundary polygon of the airspace.",

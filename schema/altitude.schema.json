@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://open-skies.org/v01/altitude.schema.json",
+  "title": "Altitude",
+  "description": "The definition of an altitude.",
+  "type": "object",
+  "properties": {
+    "m": {
+      "description": "The altitude in meters.",
+      "type": "number",
+      "minimum": 0
+    },
+    "ft": {
+      "description": "The altitude in feet.",
+      "type": "number",
+      "minimum": 0
+    },
+    "reference": {
+      "description": "The reference pressure.",
+      "type": "string",
+      "enum": ["QNH", "QNE"]
+    }
+  },
+  "oneOf": [
+    {
+      "required": ["m"]
+    },
+    {
+      "required": ["ft"]
+    }
+  ],
+  "required": ["reference"],
+  "additionalProperties": false
+}

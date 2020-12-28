@@ -34,12 +34,12 @@
     ]
   },
   "top": {
-    "type": "QNH",
-    "altitude": 2250,
-    "unit": "m"
+    "ft": 10000,
+    "reference": "QNH"
   },
   "bottom": {
-    "type": "Ground"
+    "m": 2250,
+    "reference": "QNE"
   },
   "boundary": [
     [47.123, 8.456],

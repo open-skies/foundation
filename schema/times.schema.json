@@ -19,6 +19,14 @@
           "$ref": "#/definitions/time"
         }
       },
+      "anyOf": [
+        {
+          "required": ["begin"]
+        },
+        {
+          "required": ["end"]
+        }
+      ],
       "additionalProperties": false
     },
     "weekly": {
