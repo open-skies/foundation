@@ -1,0 +1,20 @@
+{
+  "$schema": "./schema/classes.schema.json",
+  "country": "CH",
+  "classes": [
+    {
+      "id": "class-d",
+      "description": "Just an example",
+      "mandatory-equipment": [
+        "radio",
+        "transponder"
+      ],
+      "allowed-aircrafts": "none"
+    },
+    {
+      "id": "class-e",
+      "description": "Just another example",
+      "allowed-aircrafts": "all"
+    }
+  ]
+}
