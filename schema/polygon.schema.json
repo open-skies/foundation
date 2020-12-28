@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://open-skies.org/v01/polygon.schema.json",
+  "title": "Polygon",
+  "description": "A polygon defining the boundary of an open-skies airspace.",
+  "type": "array",
+  "minItems": 3,
+  "items": {
+    "description": "A vertex point of the polygon as WGS84 coordinates.",
+    "type": "array",
+    "items": [
+      {
+        "description": "The WGS84 latitude in degrees",
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      },
+      {
+        "description": "The WGS84 longitude in degrees",
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      }
+    ],
+    "minItems": 2,
+    "maxItems": 2
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://open-skies.org/v01/identifier.schema.json",
+  "title": "Identifier",
+  "description": "An identifier of airspace entities.",
+  "type": "string",
+  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+}

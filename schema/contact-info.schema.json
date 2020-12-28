@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://open-skies.org/v01/contact-info.schema.json",
+  "title": "Contact info",
+  "description": "Contact info for an airspace.",
+  "type": "object",
+  "properties": {
+    "radio": {
+      "description": "The radio frequency associated with this airspace.",
+      "type": "string"
+    },
+    "phone": {
+      "description": "The phone number associated with this airspace.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
